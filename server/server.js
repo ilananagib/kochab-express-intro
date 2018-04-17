@@ -4,9 +4,11 @@ const app = express();
 const PORT = 5000;
 
 // req is request and res is response
-app.get('/', function (req, res) {
-    res.send('Hello World');
-})
+//app.get('/', function (req, res) {
+    //res.send('Hello World');
+//})
+
+app.use(express.static('server/public'));
 
 app.get('/Hey', function (req, res) {
     res.send('Howdy');
